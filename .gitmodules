@@ -1,0 +1,3 @@
+[submodule "prime_iterator"]
+	path = prime_iterator
+	url = https://Steranoid@bitbucket.org/Steranoid/prime_iterator.git
