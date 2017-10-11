@@ -1,10 +1,9 @@
-SUBDIRS=$(wildcard */.)
+SUBDIRS=helloworld/. $(wildcard problem*/.)
+TOPTARGETS=default clean
 
-default: all
-
-all:$(SUBDIRS)
+$(TOPTARGETS):$(SUBDIRS)
 
 $(SUBDIRS):
-	$(MAKE) -C $@
+	$(MAKE) -C $@ $(MAKECMDGOALS)
 
-.PHONY: all default $(SUBDIRS)
+.PHONY: $(TOPTARGETS) $(SUBDIRS)
